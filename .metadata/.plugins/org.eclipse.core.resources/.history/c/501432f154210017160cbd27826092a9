@@ -1,0 +1,25 @@
+package core;
+
+import java.text.DecimalFormat;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+
+@Path("/temp/xml/inchtocm")
+
+public class CmToInch {
+
+       @GET
+       @Path("{input}")
+       @Produces("application/xml")
+
+       public String convertCmToInchFromInput(@PathParam("input") Double input) {
+              DecimalFormat df = new DecimalFormat("####0.00");
+              Double cm = input;
+              Double inch = cm / 2.54;
+              String inch1 = df.format(inch).toString();
+              String cm1 = df.format(cm).toString();
+        return "<calc>" + "<cm>" + cm1 + "</cm>" + "<inch>" + inch1 + "</inch>" + "</calc>";
+      }
+}

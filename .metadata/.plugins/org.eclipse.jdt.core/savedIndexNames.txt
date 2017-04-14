@@ -1,0 +1,6 @@
+INDEX VERSION 1.130+C:\Users\bmakjsimov\workspace_neon\.metadata\.plugins\org.eclipse.jdt.core
+3263526701.index
+495292081.index
+3037069227.index
+1841280308.index
+1676515626.index
